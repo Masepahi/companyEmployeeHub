@@ -1,0 +1,144 @@
+body {
+  background-color: #463c3c;
+
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+.compBtn {
+  background-color: #1d1919;
+  color: #9f9e9e;
+  border: none;
+}
+#line {
+  background-color: #f8b739;
+}
+
+#sidebar-wrapper {
+  color: #9f9e9e;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+
+.compBtn:hover {
+  background-color: #1d1919;
+  border: none;
+  color: #f8b739;
+}
+
+.compBtn:focus {
+  background-color: #1d1919;
+  border: none;
+  outline: none;
+  color: #f8b739;
+}
+
+@media (min-width: 768px) {
+  #sideBody {
+    background-color: #1d1919;
+  }
+
+  #sidebar-wrapper {
+    margin-left: 0;
+    background-color: #1d1919;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+
+#compContainer {
+  display: none;
+  color: #9f9e9e;
+  width: 400px;
+  height: 380px;  
+  background-color: #1d1919;
+  margin-left: 100px;
+  margin-top: 30px;
+  border-radius: 3%;
+}
+
+#employeesContainer {
+  display: none;
+  width: 400px;
+  height: 380px;  
+  background-color: #1d1919;
+  margin-top: 30px;
+  margin-left: 200px;
+  border-radius: 3%;
+}
+
+.updateBtn [type="text"] {
+  padding: 3px;
+  margin-top: 5px;
+  height: 30px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b4821c ;
+}
+
+.employeeBtn {
+  color: #9f9e9e;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+
+}
+
+.employeeBtn:hover {
+  color: #b4821c;
+  outline: none;
+}
+
+.employeeBtn:focus {
+  border: none;
+  outline: none;
+}
+
+
+#employeeInfo {
+  display: none;
+  background-color: #1d1919;
+  color: #9f9e9e;
+  width: 1000px;
+  height: 250px;
+  margin-top: 440px;
+  margin-left: -1000px;
+  border-radius: 10px;
+}
+
+
+#makeCompany {
+  display: none;
+  background-color: #1d1919;
+  color: #9f9e9e;
+  width: 500px;
+  height: 500px;
+  margin-top: 5%;  
+  margin-left: 400px;
+  border-radius: 10px;
+}
