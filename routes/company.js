@@ -41,6 +41,7 @@ router.post("/", (req, res) => {
 });
 
 router.put('/updateCompany/:id', (req, res) => {
+  console.log(req.body);
 
   Company.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, company) => {
       if (err) return res.status(500).json({msg: "Server Error :)", err: err.message});
@@ -49,8 +50,6 @@ router.put('/updateCompany/:id', (req, res) => {
 });
 
 router.delete('/deleteCompany/:id', (req, res) => {
-  console.log(req.params.id);
-  console.log(req.body);
   Company.findOneAndDelete({_id: req.params.id}, (err, company) => {
       if (err) return res.status(500).json({msg: "Server Error :)", err: err.message});
       res.json({company, msg: "success"});

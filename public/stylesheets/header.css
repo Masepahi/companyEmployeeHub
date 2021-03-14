@@ -8,6 +8,7 @@ body {
 }
 
 .compBtn {
+  cursor: pointer;
   background-color: #1d1919;
   color: #9f9e9e;
   border: none;
@@ -140,5 +141,19 @@ body {
   height: 500px;
   margin-top: 5%;  
   margin-left: 400px;
+  border-radius: 10px;
+}
+
+.updateInput{
+  border: none;
+  border-radius: 10px;
+  background-color: #b4821c;
+}
+
+.text {
+  color: #9f9e9e;
+}
+
+.dropdown{
   border-radius: 10px;
 }

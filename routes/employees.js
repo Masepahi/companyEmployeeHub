@@ -33,7 +33,6 @@ router.get("/companyEmployees/:id", (req, res) => {
     Employees.find(findEmployees, (err, employees) => {
       if (err)
         return res.status(500).json({ msg: "Server Error :)", err: err.message });
-        console.log(employees);
       res.send(employees);
     });
   });
@@ -59,23 +58,27 @@ router.post("/createEmployee", (req, res) => {
   newEmployee.save((err, employee) => {
     if (err)
       return res.status(500).json({ msg: "Server Error :)", err: err.message });
-    res.json(employee);
+      res.redirect('/company/companiesPage');
+
   });
 });
 
 
-router.put('updateEmployee/:id', (req, res) => {
+router.put('/updateEmployee/:id', (req, res) => {
+  console.log(req.params.id);
+
   Employees.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, employee) => {
       if (err) return res.status(500).json({msg: "Server Error :)", err: err.message});
-      res.json(employee);
+      res.send(employee);
   })
 });
 
 router.delete('/:id', (req, res) => {
-  console.log(req.params.id);
+
   Employees.findOneAndDelete({_id: req.params.id}, (err, Employee) => {
       if (err) return res.status(500).json({msg: "Server Error :)", err: err.message});
-      res.json({Employee, msg: "success"});
+      res.redirect('/company/companiesPage');
+
   })
 });
 
